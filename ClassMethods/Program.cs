@@ -23,14 +23,17 @@
 
             var person = new Human("Albertas", "Majauskas", 35);
             person.Pets.Add(new Pet("Suo", "Reksas", 5, "woof"));
+            person.Pets.Add(new Pet("Suo", "Lese", 7, "woof"));
             person.Pets.Add(new Pet("Papuga", "Zibe", 15, "chirp"));
             person.Pets.Add(new Pet("Kate", "Rainis", 3, "meow"));
-            person.PrintPets();
 
-            foreach(var pet in person.Pets)
-            {
-                pet.MakeSound();
-            }
+            person.PrintPets();
+            Console.WriteLine("Zemiau isspaudinsime gyvunus pagal filtra");
+            person.PrintPets("Suo");
+            //foreach(var pet in person.Pets)
+            //{
+            //    pet.MakeSound();
+            //}
         }
     }
 }

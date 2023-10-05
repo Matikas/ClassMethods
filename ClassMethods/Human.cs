@@ -53,5 +53,16 @@ namespace ClassMethods
                 Console.WriteLine($"{pet.AnimalType}, {pet.Name}, {pet.Age}");
             }
         }
+
+        public void PrintPets(string animalType)
+        {
+            foreach (var pet in Pets)
+            {
+                if (pet.AnimalType == animalType)
+                {
+                    Console.WriteLine($"{pet.AnimalType}, {pet.Name}, {pet.Age}");
+                }
+            }
+        }
     }
 }
