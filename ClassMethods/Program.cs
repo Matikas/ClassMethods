@@ -28,8 +28,13 @@
             person.Pets.Add(new Pet("Kate", "Rainis", 3, "meow"));
 
             person.PrintPets();
-            Console.WriteLine("Zemiau isspaudinsime gyvunus pagal filtra");
+            Console.WriteLine("Zemiau isspaudinsime gyvunus pagal tipo filtra");
             person.PrintPets("Suo");
+            Console.WriteLine("Zemiau isspaudinsime gyvunus pagal amziaus filtra");
+            person.PrintPets(6);
+            Console.WriteLine("Zemiau isspaudinsime gyvunus pagal tipo ir amziaus filtra");
+            person.PrintPets("Suo", 6);
+
             //foreach(var pet in person.Pets)
             //{
             //    pet.MakeSound();

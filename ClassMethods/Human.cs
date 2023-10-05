@@ -64,5 +64,27 @@ namespace ClassMethods
                 }
             }
         }
+
+        public void PrintPets(int age)
+        {
+            foreach (var pet in Pets)
+            {
+                if (pet.Age >= age)
+                {
+                    Console.WriteLine($"{pet.AnimalType}, {pet.Name}, {pet.Age}");
+                }
+            }
+        }
+
+        public void PrintPets(string animalType, int age)
+        {
+            foreach (var pet in Pets)
+            {
+                if (pet.AnimalType == animalType && pet.Age >= age)
+                {
+                    Console.WriteLine($"{pet.AnimalType}, {pet.Name}, {pet.Age}");
+                }
+            }
+        }
     }
 }
